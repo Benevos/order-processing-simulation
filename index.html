@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulacion de procesado de ordenes</title>
+
+    <link rel="stylesheet" href="/css/gridcss-5-0-2.css">
+    <link rel="stylesheet" href="/css/fisico.css">
+    <link rel="stylesheet" href="/css/botones.css">
+
+    <script src="/scripts/gridjs-5-0-2.js"></script>
+    <script src="/scripts/cronometro.js"></script>
+    <script src="/scripts/producto-index.js"></script>
+    <script src="/scripts/clases/truck-class.js"></script>
+    <script src="/scripts/clases/merch-class.js"></script>
+    <script src="/scripts/clases/box-class.js"></script>
+    <script src="/scripts/clases/message-class.js"></script>
+    <script src="/scripts/clases/operator-class.js"></script>
+    <script src="/main.js"></script>
+
+</head>
+<body id="body">
+
+    <!-- Ancho de pantalla = 1335px -->
+
+    <div id="modal-container" class="modal-container">
+        <div class="modal">
+            <h1>Estadisticas.</h1>
+                <div id="grid"></div>
+            <a id="close" onclick="cerrar()">Cerrar</a>
+        </div>
+    </div>
+            
+    <div id="sistema"> </div>
+
+    <div id="cliente"><img src="/modelos/Cliente.png" height="50" width="50"></div>
+    <h5 style="position: absolute; top: 240px; left: 40px">Cliente</h5>
+
+    <div id="creacion-orden"><img src="/modelos/Servidor.png" height="50px" width="50px"></div>
+    <h5 style="position: absolute; top: 240px; left: 190px">Creacion y envio <br>de solicitud</h5>
+
+    <div id="distribucion"><img src="/modelos/Almacen.png" height="50px" width="50px"></div>
+    <h5 style="position: absolute; top: 390px; left: 190px">Centro de<br>distribucion</h5>
+
+    <div id="logistica"><img src="/modelos/Servidor.png" height="50px" width="50px"></div>
+    <h5 style="position: absolute; top: 240px; left: 365px">Sistema de<br>logistica</h5>
+
+    <div id="carguero"><img src="/modelos/Camion.png" height="50px" width="50px"></div>
+    <h5 style="position: absolute; top: 390px; left: 365px">Carguero</h5>
+
+    <div id="almacen"></div>
+
+    <div id="estacionamiento"></div>
+
+    <div id="ordenamineto"></div>
+
+    <div id="carga"></div>
+
+    <hr id="ruta1" class="rutas">
+    <hr id="ruta2" class="rutas">
+    <hr id="ruta3" class="rutas">
+    <hr id="ruta4" class="rutas">
+    <hr id="ruta5" class="rutas">
+    <hr id="ruta6" class="rutas">
+    <hr id="ruta7" class="rutas">
+    <hr id="ruta8" class="rutas">
+
+    <h5 style="position: absolute; top: 155px; left: 825px">Zona de ordenamineto</h5>
+
+    <h5 style="position: absolute; top: 420px; left: 825px">Zona de carga</h5>
+
+        <div id="orden"><img src="/modelos/Impresora.png" height="50px" width="50px"></div>
+        <h5 style="position: absolute; top: 240px; left: 530px">Impresora de<br>ordenes</h5>
+
+        <div id="mercancia"><img src="/modelos/Estanteria.png" height="50px" width="50px"></div>
+        <h5 style="position: absolute; top: 240px; left: 700px">Mercancia<br>suelta</h5>
+
+        <div id="cajas"><img src="/modelos/Estanteria.png" height="50px" width="50px"></div>
+        <h5 style="position: absolute; top: 390px; left: 700px">Almacen de<br>cajas</h5>
+
+
+    <a id="play" type="button" onclick="reproducir()">Reproducir</a>
+    <a id="reload" type="button" onclick="document.location.reload(true)">Recargar</a>
+    <a id="random" type="button" href="generacion/menu-generacion.html">Metodos de generacion<br>pseudoaleatoria</a>
+
+    <label id="metodo">Metodo de productos medios.</label>
+
+    <label id="label0" class="etiquetas">Aleatorio</label>
+    <input type="checkbox" id="rand" value="aleatorio" onclick="checkbox()">
+
+    <label id="label1" class="etiquetas">Semilla 1: </label> 
+    <input id="semilla" type="text" placeholder="Ingrese la semilla...">
+
+    <label id="label2" class="etiquetas">Semilla 2: </label> 
+    <input id="semilla2" type="text" placeholder="Ingrese la semilla...">
+
+    <label id="label3" class="etiquetas">Variables: </label> 
+    <input id="labelnum" type="text" placeholder="Ingrese el numero de variables..."> 
+
+    <div id="seguimiento">
+        <label id="ordGenLbl" class="seg">Ordenes generadas: </label><label id="ordGen" class="segRes"> </label>
+        <label id="ordProLbl" class="seg">Ordenes pendientes: </label><label id="ordPro" class="segRes"> </label>
+        <label id="ordFinLbl" class="seg">Ordenes finalizadas: </label><label id="ordFin" class="segRes"> </label>
+    </div>
+
+    <br><br>
+
+    <div >
+        <label style="color: #ee9696; position: absolute; top: 515px; left: 610px;">Resultados de generacion:</label> 
+        <label style="position: absolute; top: 515px; left: 50px; color: #ffffff">D = </label> 
+        <label id="D" style="position: absolute; top: 515px; left: 90px; color: #64fb00"> </label>
+    </div>
+
+    <div id="chronometer">
+        <h1 data-chronometer>00:00:00</h1>
+    </div>
+
+    <div id="grid-contanier">
+        <div id="fila-1" class="grid-item">
+            Numero
+        </div>
+
+        <div id="fila-2" class="grid-item">
+            Y
+        </div>
+
+        <div id="fila-3" class="grid-item">
+            X
+        </div>
+
+        <div id="fila-4" class="grid-item">
+            r
+        </div>
+    </div>
+
+</body>
+</html>

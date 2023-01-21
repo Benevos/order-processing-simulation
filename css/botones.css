@@ -1,0 +1,68 @@
+a
+{
+    position: absolute;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    border: none;
+}
+
+#play
+{
+    top: 25px;
+    left: 25px;
+    background-color: #4CAF50;
+    color: white;
+    
+}
+
+#reload
+{
+    top: 25px;
+    left: 180px;
+    background-color: #FB9B00;
+    color: white;
+}
+
+#random
+{
+    top: 25px;
+    left: 350px;
+    background-color: #64fb00;
+    color: white;
+}
+
+#metodo
+{position: absolute; top: 20px; left: 770px; color: #ee9696; font-size: 20px;}
+
+#label0
+{color: #FFFFFF;position: absolute; top: 50px; left: 1240px;}
+#rand
+{position: absolute; top: 81px; left: 1262px;}
+
+#label1
+{color: #FFFFFF;position: absolute; top: 50px; left: 635px;}
+#semilla
+{position: absolute; top: 80px; left: 635px;}
+
+#label2
+{color: #FFFFFF;position: absolute; top: 50px; left: 835px;}
+#semilla2
+{position: absolute; top: 80px; left: 835px;}
+
+#label3
+{color: #FFFFFF;position: absolute; top: 50px; left: 1035px;}
+#labelnum
+{position: absolute; top: 80px; left: 1035px;}
+
+#play:hover,#reload:hover,#random:hover
+{
+    background-color: #EDFFFB;
+    color: #000000;
+}

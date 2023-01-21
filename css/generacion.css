@@ -1,0 +1,72 @@
+a
+{
+    background-color: #706F6F;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
+
+#play
+{
+    position: absolute;
+    background-color: #4CAF50;
+    left: 600px;
+    top: 40px;
+}
+
+#regresar
+{
+    position: absolute;
+    background-color: #FF0000;
+    top: 38px;
+    left: 100px;
+}
+
+#limpiar
+{
+    width: auto;
+    position: absolute;
+    background-color: #FB9B00;
+    top: 38px;
+    left: 1135px;
+}
+
+#play:hover, #regresar:hover, #limpiar:hover
+{
+    background-color: #EDFFFB;
+    color: #000000;
+}
+
+#etiquetas
+{
+    color: #FFFFFF
+}
+
+#fila-1
+{
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}
+
+#fila-2
+{
+    position: absolute;
+    top: 150px;
+    left: 460px;
+}
+
+#fila-3
+{
+    position: absolute;
+    top: 150px;
+    left: 935px;
+}

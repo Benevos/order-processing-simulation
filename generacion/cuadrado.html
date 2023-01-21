@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generacion de numeros pseudoaletorios</title>
+    <link rel="stylesheet" href="/css/generacion.css">
+    <script src="/scripts/cuadrado.js"></script>
+</head>
+<body style="background-color: #6A6A6A;">
+
+    <a id="regresar" type="button" href="/generacion/menu-generacion.html">Regresar</a>
+
+    <a id="limpiar" type="button" onclick="document.location.reload(true)">Limpiar</a>
+
+    <center>
+        <label style="color: #FFFFFF; font-size: 20px;">Semilla: </label> 
+        <input id="semilla" type="text" placeholder="Ingrese la semilla...">
+
+        <label style="color: #FFFFFF; font-size: 20px;">Variables: </label> 
+        <input id="labelnum" type="text" placeholder="Ingrese el numero de variables...">
+
+        <br><br>
+        <a id="play" onclick="generar(); etiqueta();">Inicar generacion</a>
+    </center>
+
+    <div style="color: #FFFFFF; font-size: 20px;">
+
+        <label style="position: absolute; top: 100px; left: 50px;">D = </label> 
+        <label id="D" style="position: absolute; top: 100px; left: 90px;"> </label>
+
+        <label style="position: absolute; top: 100px; left: 250px;">y</label>
+        <label style="position: absolute; top: 100px; left: 700px;">x</label>
+        <label style="position: absolute; top: 100px; left: 1140px;">r</label>
+
+    </div>
+
+    <div id="etiquetas">
+        <div id="fila-1">
+
+        </div>
+
+        <div id="fila-2">
+  
+        </div>
+
+        <div id="fila-3">
+
+        </div>
+    </div>
+</body>
+</html>

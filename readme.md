@@ -1,0 +1,1 @@
+This project was carried out as a means of evaluation for a simulation course. Created with the objective of imitating a simulation presented on an industrial simulation program.

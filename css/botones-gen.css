@@ -1,0 +1,42 @@
+form
+{
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px; 
+    border-radius: 20px;
+}
+
+a
+{
+    background-color: #706F6F;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    width: 200px;
+}
+
+#regresar
+{
+    width: auto;
+    position: absolute;
+    background-color: #FF0000;
+    left: 100px;
+}
+
+#regresar:hover,#cuadrado:hover,#producto:hover,#constante:hover,#congruencial:hover,#c-multi:hover,
+#c-ad:hover
+{
+    background-color: #EDFFFB;
+    color: #000000;
+}
