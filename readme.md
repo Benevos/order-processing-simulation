@@ -1,1 +1,3 @@
-This project was carried out as a means of evaluation for a simulation course. Created with the objective of imitating a simulation presented on an industrial simulation program.
+As a student a begginer at the time of creation, code may not have the best practices of coding.
+Certain areas of this projects are in spanish in order to preservate its state at the moment of retriving.
+Still learining about git...
